@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: pink;
+    padding-top: 30px;
+
+}
+
+
+h1{
+    font-family: cursive;
+    font-weight: bold;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+
+.selected{
+    
+   display: none;
+    
+}
+
+
+.start-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
+.circle{
+    width: 300px;
+    height: 300px;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+
+}
+
+
+
+.circle::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top: 50px solid white;
+    transform: rotate(-35deg);
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    
+}
+
+.text{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: cursive;
+   
+}
+
+.start button{
+    margin-top: 30px;
+    width: 130px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid black;
+    background-color: pink;
+   
+   
+}
+
+
+.todo{
+    background-color: white;
+    padding: 30px;
+    display: none;
+    
+}
+
+.center{
+    width: 100%;
+    text-align: center;
+}
+
+.todo label{
+
+    font-weight: bold;
+    
+
+}
+.todo input{
+    border: 1px solid black;
+    width: calc(100% /2);
+    height: 30px;
+
+}
+
+
+.todo .btn{
+    background-color: pink;
+    color: black;
+    font-weight: bold;
+    border: 1px solid pink;
+    padding:3px 20px;
+    cursor: pointer;
+
+}
+
+.todo ul{
+    margin-top: 30px;
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+.todo ul li::before{
+    content: '\2217';
+    margin-right: 15px;
+    color: pink;
+    font-weight: bold;
+    
+}
+
+.todo ul li{
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: left;
+    
+}
+
+.todo ul li:nth-child(even){
+    background-color: pink;
+}
+
+.todo ul li:nth-child(even)::before{
+    color: white;
+}
+
+.todo ul li .btn2{
+    float: right;
+    width: 80px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: pink;
+    border: 1px solid pink;
+    cursor: pointer;
+}
+
+.todo ul li:nth-child(even) .btn2{
+    background-color:white;
+}
+
+.selected2{
+    display: block;
+}
+
+
+@media(min-width:300px) and (max-width:480px) {
+    .todo label,.todo input,.todo .btn{
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+  
+
+    .todo .btn{
+        padding: 10px;
+    }
+
+    .todo ul li .btn2{
+        
+        width: 50px;
+        height: 35px;
+        font-weight: bold;
+        font-size: 10px;
+        
+    }
+}
+
